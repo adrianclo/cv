@@ -1,0 +1,260 @@
+% FortySecondsCV LaTeX template
+% Copyright © 2019 René Wirnata <rene.wirnata@pandascience.net>
+% Licensed under the 3-Clause BSD License. See LICENSE file for details.
+%
+% Attributions
+% ------------
+% * fortysecondscv is based on the twentysecondcv class by Carmine Spagnuolo 
+%   (cspagnuolo@unisa.it), released under the MIT license and available under
+%   https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex
+% * further attributions are indicated immediately before corresponding code
+
+
+%-------------------------------------------------------------------------------
+%                             ADDITIONAL PACKAGES
+%-------------------------------------------------------------------------------
+\documentclass[
+  a4paper, 
+%   showframes,
+   maincolor=cvblue,
+   sectioncolor=cvblue,
+%   subsectioncolor=orange
+%   sidebarwidth=0.4\paperwidth,
+%   topbottommargin=0.03\paperheight,
+%   leftrightmargin=20pt
+]{fortysecondscv}
+
+% improve word spacing and hyphenation
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+% take care of proper font encoding
+\ifxetex
+	\usepackage{fontspec}
+	\defaultfontfeatures{Ligatures=TeX}
+% \newfontfamily\headingfont[Path = fonts/]{segoeuib.ttf} % local font
+\else
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+% \usepackage[sfdefault]{noto} % use noto google font
+\fi
+
+% enable mathematical syntax for some symbols like \varnothing
+\usepackage{amssymb}
+
+% bubble diagram configuration
+\usepackage{smartdiagram}
+\smartdiagramset{
+  % defaut font size is \large, so adjust to harmonize with sidebar layout
+  bubble center node font = \footnotesize,
+  bubble node font = \footnotesize,
+  % default: 4cm/2.5cm; make minimum diameter relative to sidebar size
+  bubble center node size = 0.4\sidebartextwidth,
+  bubble node size = 0.25\sidebartextwidth,
+  distance center/other bubbles = 1.5em,
+  % set center bubble color
+  bubble center node color = maincolor!70,
+  % define the list of colors usable in the diagram
+  set color list = {maincolor!10, maincolor!40,
+  maincolor!20, maincolor!60, maincolor!35},
+  % sets the opacity at which the bubbles are shown
+  bubble fill opacity = 0.8,
+}
+
+\usepackage[euler]{textgreek}
+
+%-------------------------------------------------------------------------------
+%                            ADDITIONAL FUNCTIONS
+%-------------------------------------------------------------------------------
+
+\newcommand*{\cvgithub}[1]{\cvcustomdata{\faGithub}{\href{http://#1}{#1}}}
+
+%-------------------------------------------------------------------------------
+%                            PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+% profile picture
+\cvprofilepic{pics/profilephoto.png}
+% your name
+\cvname{Adrian C. Lo}
+% job title/career
+\cvjobtitle{Neuroscientist, Data Analyst}
+% date of birth
+\cvbirthday{June 30, 1984}
+% short address/location, use \newline if more than 1 line is required
+\cvaddress{Pully (VD), Switzerland}
+% phone number
+\cvphone{+41 78 653 92 08}
+% personal website
+%\cvsite{https://pandascience.net}
+% email address
+\cvmail{adrianclo1984@gmail.com}
+% pgp key
+\cvgithub{github.com/adrianclo}
+% add additional information
+% \newcommand{\additional}{some more?}
+
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 1st PAGE
+%-------------------------------------------------------------------------------
+% overwrite default icons and order of personal information
+% \renewcommand{\personaltable}{%
+% 	\begin{personal}[0.8em]
+% 		\circleicon{\faKey}      & \cvkey  \\
+% 		\circleicon{\faAt}       & \cvmail \\
+% 		\circleicon{\faGlobe}    & \cvsite \\
+% 		\circleicon{\faPhone}    & \cvphone \\
+% 		\circleicon{\faEnvelope} & \cvaddress \\
+% 		\circleicon{\faInfo}     & \cvbirthday \\
+% 		% add another line
+% 		\circleicon{\faQuestion} & \additional
+% 	\end{personal}
+% }
+
+% add more profile sections to sidebar on first page
+\addtofrontsidebar{
+	% include gosquare national flags from https://github.com/gosquared/flags;
+	% naming according to ISO 3166-1 alpha-2 country codes
+	\graphicspath{{pics/flags/}}
+    
+    \profilesection{About Me}
+	\aboutme{
+		I am a neuroscientist with a background in psychology and expertise in \textbf{statistics}. While during the last 5 years I have been studying rodent behavior and molecular biology, I gained expertise in \textbf{developing programs} and \textbf{shiny apps}. These programs vastly improved the data-processing pipeline for myself as well as colleagues.
+	}
+	
+	\profilesection{Languages}
+		\pointskill{\flag{BE.png}}{Dutch}{5}
+		\pointskill{\flag{GB.png}}{English}{5}
+  	    \pointskill{\flag{FR.png}}{French}{4}
+  	    \pointskill{\flag{DE.png}}{German}{1}
+  	    
+	\profilesection{Computer Skills}
+	
+		\pointskill{}{R}{5}
+		\pointskill{}{R Markdown}{5}
+		\pointskill{}{Shiny}{3}
+		\pointskill{}{Machine Learning}{3}
+		\pointskill{}{SQL}{3}
+		\pointskill{}{SPSS}{3}
+  	    \pointskill{}{Python}{2}
+  	    \pointskill{}{HTML}{2}
+  	    \pointskill{}{SAS}{2}
+  	    \pointskill{}{\LaTeX}{2}
+  	    \pointskill{}{Ethovision}{4}
+}
+
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 2nd PAGE
+%-------------------------------------------------------------------------------
+\addtobacksidebar{
+	\profilesection{Soft Skills}
+	\begin{figure}\centering
+		\smartdiagram[bubble diagram]{
+			\textcolor{white}{\textbf{Project}} \\ 
+			\textcolor{white}{\textbf{Management}}, % center bubble	
+			\textcolor{black!90}{Problem Solving},
+			\textcolor{black!90}{Planning},
+			\textcolor{black!90}{Risk Management},
+			\textcolor{black!90}{Communication},
+			\textcolor{black!90}{Coaching}
+		}
+	\end{figure}
+
+    \begin{figure}\centering
+		\smartdiagram[bubble diagram]{
+			\textcolor{white}{\textbf{Personality}}, % center bubble	
+			\textcolor{black!90}{Proactive},
+			\textcolor{black!90}{Exploratory},
+			\textcolor{black!90}{Analytical Mind},
+			\textcolor{black!90}{Team Player}
+		}
+	\end{figure}
+\newline \newline
+
+	\profilesection{Extra-Curricular \newline Activities}
+    \wheelchart{4em}{2em}{%
+  	45/3em/maincolor!50/Sports,
+  	10/3em/maincolor!15/Travel,
+  	25/4em/maincolor!40/Music,
+  	20/3em/maincolor!20/Nature
+	}
+}
+
+
+%-------------------------------------------------------------------------------
+%                         TABLE ENTRIES RIGHT COLUMN
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makefrontsidebar
+
+\cvsection{Working Experience}
+\begin{cvtable}
+	\cvitem{2016 -- present}{Neuroscientist}{Université de Lausanne, Switzerland}{Post-doctoral research on the involvement of the RNA binding protein FXR2P in status epilepticus: Behavioral and molecular evaluation (Laboratory of Prof. Claudia Bagni)}
+	\cvitem{2014 -- 2015}{Neuroscientist}{KU Leuven, Belgium}{
+		Post-doctoral research on cue competition and contextual fear learning in rodents and humans. (Laboratory of Prof. Bram Vervliet)}
+\end{cvtable}
+
+\cvsection{Education}
+\begin{cvtable}
+    \cvitem{2015}{Summer school}{Center for Excellence, Belgium}{Emotional Learning and Memory in Health and Psychopathology}
+    \cvitem{2014}{\textbf{Neuroscience Summer Program}}{RIKEN BSI, Japan}{}
+    \cvitem{2011}{\textbf{Training in the use of the \href{https://www.tse-systems.com/product-details/intellicage}{\color{blue}{IntelliCage}}}}{University of Zürich, Switzerland}{}
+	\cvitem{2008 -- 2013}{PhD student, Neuroscientist}{KU Leuven, Belgium}{Dissertation: "Mouse models of Alzheimer's disease: behavioral validity and use in preclinical therapy evaluation". Mentors: Prof. Rudi D'Hooge and Prof. Bart De Strooper}
+	\cvitem{2007 -- 2008}{Intership}{KU Leuven, Belgium}{Dissertation: "Visual spatial learning in C57BL/6J mice: proximal and distal cue-related learning in the Barnes maze and radial arm maze. The involvement of dorsal hippocampus in the Barnes maze". Mentors: Prof. Rudi D'Hooge and Dr. Ilse Gantois}
+	\cvitem{2003 -- 2008}{Master of Science in Theoretical Psychology}{KU Leuven, Belgium}{Dissertation: "The relationship between working memory and (non-)focal search processes in prospective memory". Mentor: Prof. Géry Van Outryve d'Ydewalle}
+\end{cvtable}
+    
+\cvsection{Certificates and Courses}
+    \cvitem{12/2019}{Advanced R Shiny}{SIB, Switzerland}{}
+    \cvitem{01/2019}{Data Management Plan}{SIB, Switzerland}{}
+    \cvitem{10/2018}{Project Management}{EPFL, Switzerland}{}
+    \cvitem{09/2018}{Introduction to Data Analysis with Python}{EPFL Extension School, Switzerland}{}
+    \cvitem{06/2018}{Statistical Methods for Big Data in Life Sciences and Health with R}{SIB, Switzerland}{}
+    \cvitem{09/2015}{Introduction to SAS}{LSTAT, Belgium}{}
+    \cvitem{05/2015}{Text Mining with R}{KU Leuven, Belgium}{}
+    \cvitem{09/2013}{FELASA C - Laboratory Animal Sciences}{KU Leuven, Belgium}{}
+
+\cvsection{My R programs portfolio}
+\textbf{meaR} (public repository) \newline
+The output files from \href{https://www.multichannelsystems.com/products/vitro-mea-systems}{\color{blue}{Multi-Electrode Arrays}} contain electrophysiological data and are scanned and extracted for only the numeric data. In the master dataframe, meaR performs calculations for a variety of electrophysiological parameters and visualizes spike and burst activity for all 60 electrodes over time \newline\newline
+\textbf{phenotyper} (private repository) \newline
+For the processing and analysis of \href{https://www.sylics.com/bioinformatics/cognitionwall/}{\color{blue}{Phenotyper}} data, we can use a cloud service upon payment. Through reverse engineering, the phenotyper program performs similarly to the cloud service and calculates additional behavioral parameters \newline\newline
+\textbf{easyPCR} (private repository) \newline
+Mouse genotyping is a tedious process that requires prior to pipetting the identification of the sample's model, calculation of pre-mixes, and planning of the assembly plates for PCR and electrophoresis, which can easily take up to half a day time. With easyPCR, all these steps are automatically performed and presented in an R Markdown file ready for the user to follow \newline\newline
+\textbf{unidamr} (private repository) \newline
+Through a Shiny app, behavioral data from \emph{Drosophila} are analyzed, categorized as either sleep or awake state, and several parameters are calculated and analyzed
+
+\newpage
+\makebacksidebar
+
+
+\cvsection{Teaching Experience}
+    \cvitem{09/2019}{Unofficial Course at my department}{Université de Lausanne, Switzerland}{How to use R for data import, manipulation, visualization and analysis: for PhD students}
+    \cvitem{09/2015}{Workshop at Summer School}{KU Leuven, Belgium}{Subject: "The use of rodent models in fear conditioning, learning and memory}
+    \cvitem{2013}{Bachelor Course at KU Leuven}{B-KUL-P0M20B}{How to use SPSS for basic data manipulation and interpret SPSS output}
+
+\cvsection{Conferences and Presentations}
+    \cvitem{2018}{NCCR-SYNAPSY Conference}{Geneva, Switzerland}{Cognitive flexibility in a mouse model for Fragile X Syndrome}
+    \cvitem{2014}{RIKEN Brain Science Institute}{Tokyo, Japan}{Treatment with tauroursodeoxycholic acid modulates \textgamma-secretase activity and rescues memory deficits in APP/PS1 mice, an AD mouse model}
+    \cvitem{2012}{International Stockholm/Springfield symposium on advances in Alzheimer's disease}{Stockholm, Sweden}{Behavioural effects of selenium in mouse models of Alzheimer’s disease}
+    \cvitem{2010}{Forum of European Neurosciences}{Amsterdam, The Netherlands}{Reversible changes in neurocognitive performance and hippocampal synaptic plasticity in tau mutant mouse lines}
+    
+\cvsection{Publications (5 most relevant)}
+For the full list, \href{https://www.researchgate.net/profile/Adrian_Lo/research}{\color{blue}{please click here}} \newline
+
+\begin{cvtable}
+	\cvitem{2019}{\emph{Nature Communications}, \textbf{10}, 3454}{}{\textbf{The autism- and schizophrenia-associated protein CYFIP1 regulates bilateral brain connectivity and behaviour} \newline Domínguez-Iturza N, \textbf{Lo AC}, Shah D, Armendáriz M, Vannelli A, Mercaldo V, Trusel M, Li KW, Gastaldo D, Santos AR, Callaerts-Vegh Z, D'Hooge R, Mameli M, Van der Linden A, Smit AB, Achsel T, Bagni C.}
+	\cvitem{2017}{\emph{Nature Communications}, \textbf{8}, 293}{}{\textbf{The non-coding RNA BC1 regulates experience-dependent structural plasticity and learning}\newline Briz V, Restivo L, Pasciuto E, Juczewski K, Mercaldo V, \textbf{Lo AC}, Baatsen P, Gounko NV, Borreca A, Girardi T, Luca R, Nys J, Poorthuis RB, Mansvelder HD, Fisone G, Ammassari-Teule M, Arckens L, Krieger P, Meredith R, Bagni C.}
+	\cvitem{2014}{\emph{Neuropharmacology}, \textbf{85}, 178-89}{}{\textbf{SSP-002392, a new 5-HT4 receptor agonist, dose-dependently reverses scopolamine-induced learning and memory impairments in C57Bl/6 mice}\newline \textbf{Lo AC}, De Maeyer JH, Vermaercke B, Callaerts-Vegh Z, Schuurkes JA, D'Hooge R.
+	}
+	\cvitem{2013}{\emph{Neuropharmacology}, \textbf{75}, 458-66}{}{\textbf{Dose-dependent improvements in learning and memory deficits in APPPS1-21 transgenic mice treated with the orally active A\textbeta toxicity inhibitor SEN1500}\newline \textbf{Lo AC}, Tesseur I, Scopes DI, Nerou E, Callaerts-Vegh Z, Vermaercke B, Treherne JM, De Strooper B, D'Hooge R.
+	}
+	\cvitem{2013}{\emph{Science}, \textbf{340}, 924-e}{}{\textbf{Comment on "ApoE-directed therapeutics rapidly clear \textbeta-amyloid and reverse deficits in AD mouse models"}\newline Tesseur I*, \textbf{Lo AC}*, Roberfroid A, Dietvorst S, Van Broeck B, Borgers M, Gijsen H, Moechars D, Mercken M, Kemp J, D'Hooge R, De Strooper B. * authors contributed equally
+	}
+\end{cvtable}
+
+\cvsignature
+
+\end{document} 
