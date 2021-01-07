@@ -73,9 +73,9 @@
 %                            PERSONAL INFORMATION
 %-------------------------------------------------------------------------------
 % profile picture
-\cvprofilepic{pics/profilephoto.png}
+% \cvprofilepic{pics/profilephoto.png}
 % your name
-\cvname{Adrian C. Lo}
+\cvname{Adrian C. \textbf{Lo}}
 % job title/career
 \cvjobtitle{Neuroscientist, Data Analyst}
 % date of birth
@@ -119,11 +119,11 @@
     
     \profilesection{About Me}
 	\aboutme{
-		I have a background in theoretical psychology and \textbf{statistics}. During the last 5 years I studied rodent behavior and molecular biology, but also gained expertise in developing \textbf{R programs}, \textbf{shiny apps} and \textbf{automated reports}. Wth these tools, I improved the speed and efficiency of data-processing for myself as well as colleagues.
+		I have a background in theoretical psychology and \textbf{statistics}. During the last 5 years I studied and analyzed rodent behavior and molecular biology, but also gained expertise in developing \textbf{R programs}, \textbf{shiny apps} and \textbf{automated reports}. With these tools, I improved the speed and efficiency of data-processing for myself as well as colleagues.
 	}
 	
 	\profilesection{Languages}
-		\pointskill{\flag{BE.png}}{Dutch}{5}
+		\pointskill{\flag{BE.png}}{Dutch (native)}{5}
 		\pointskill{\flag{GB.png}}{English}{5}
   	    \pointskill{\flag{FR.png}}{French}{4}
   	    \pointskill{\flag{DE.png}}{German}{1}
@@ -132,17 +132,16 @@
 	
 		\pointskill{}{R}{5}
 		\pointskill{}{R Markdown}{5}
-		\pointskill{}{Data viz (ggplot2)}{5}
+		\pointskill{}{Visualization (ggplot2)}{5}
 		\pointskill{}{Shiny}{3}
 		\pointskill{}{Machine Learning}{3}
 		\pointskill{}{SQL}{3}
+		\pointskill{}{Python}{3}
 		%\pointskill{}{SPSS}{3}
-  	    \pointskill{}{Python}{2}
   	    \pointskill{}{HTML}{2}
   	    \pointskill{}{SAS}{2}
   	    \pointskill{}{\LaTeX}{2}
 }
-
 
 %-------------------------------------------------------------------------------
 %                              SIDEBAR 2nd PAGE
@@ -200,40 +199,45 @@
 
 \cvsection{Education}
 \begin{cvtable}
-    \cvitem{2015}{Summer school}{Center for Excellence, Belgium}{Emotional Learning and Memory in Health and Psychopathology}
-    \cvitem{2014}{\textbf{Neuroscience Summer Program}}{RIKEN BSI, Japan}{}
-    \cvitem{2011}{\textbf{Training in the use of the \href{https://www.tse-systems.com/product-details/intellicage}{\color{blue}{IntelliCage}}}}{University of Zürich, Switzerland}{}
-	\cvitem{2008 -- 2013}{PhD student, Neuroscientist}{KU Leuven, Belgium}{Dissertation: "Mouse models of Alzheimer's disease: behavioral validity and use in preclinical therapy evaluation". Mentors: Prof. Rudi D'Hooge and Prof. Bart De Strooper}
-	\cvitem{2007 -- 2008}{Intership}{KU Leuven, Belgium}{Dissertation: "Visual spatial learning in C57BL/6J mice: proximal and distal cue-related learning in the Barnes maze and radial arm maze. The involvement of dorsal hippocampus in the Barnes maze". Mentors: Prof. Rudi D'Hooge and Dr. Ilse Gantois}
-	\cvitem{2003 -- 2008}{Master of Science in Theoretical Psychology}{KU Leuven, Belgium}{Dissertation: "The relationship between working memory and (non-)focal search processes in prospective memory". Mentor: Prof. Géry Van Outryve d'Ydewalle}
+    %\cvitem{2015}{Summer school}{Center for Excellence, Belgium}{Emotional Learning and Memory in Health and Psychopathology}
+    %\cvitem{2014}{\textbf{Neuroscience Summer Program}}{RIKEN BSI, Japan}{}
+    %\cvitem{2011}{\textbf{Training in the use of the \href{https://www.tse-systems.com/product-details/intellicage}{\color{blue}{IntelliCage}}}}{University of Zürich, Switzerland}{}
+	\cvitem{2008 -- 2013}{PhD student, Neuroscientist}{KU Leuven, Belgium}{}
+	%\cvitem{2008 -- 2013}{PhD student, Neuroscientist}{KU Leuven, Belgium}{Dissertation: "Mouse models of Alzheimer's disease: behavioral validity and use in preclinical therapy evaluation". Mentors: Prof. Rudi D'Hooge and Prof. Bart De Strooper}
+	%\cvitem{2007 -- 2008}{Intership}{KU Leuven, Belgium}{Dissertation: "Visual spatial learning in C57BL/6J mice: proximal and distal cue-related learning in the Barnes maze and radial arm maze. The involvement of dorsal hippocampus in the Barnes maze". Mentors: Prof. Rudi D'Hooge and Dr. Ilse Gantois}
+	\cvitem{2003 -- 2008}{Master of Science in Theoretical Psychology}{KU Leuven, Belgium}{}
+	%\cvitem{2003 -- 2008}{Master of Science in Theoretical Psychology}{KU Leuven, Belgium}{Dissertation: "The relationship between working memory and (non-)focal search processes in prospective memory". Mentor: Prof. Géry Van Outryve d'Ydewalle}
 \end{cvtable}
     
 \cvsection{Certificates and Courses}
     \cvitem{12/2019}{Advanced R Shiny}{SIB, Switzerland}{}
-    \cvitem{01/2019}{Data Management Plan}{SIB, Switzerland}{}
-    \cvitem{10/2018}{Project Management}{EPFL, Switzerland}{}
     \cvitem{09/2018}{Introduction to Data Analysis with Python}{EPFL Extension School, Switzerland}{}
     \cvitem{06/2018}{Statistical Methods for Big Data in Life Sciences and Health with R}{SIB, Switzerland}{}
-    \cvitem{09/2015}{Introduction to SAS}{LSTAT, Belgium}{}
+    \cvitem{12/2020}{Databases and SQL for Data Science}{IBM, Coursera}{}
     \cvitem{05/2015}{Text Mining with R}{KU Leuven, Belgium}{}
+    \cvitem{01/2019}{Data Management Plan}{SIB, Switzerland}{}
+    \cvitem{10/2018}{Project Management}{EPFL, Switzerland}{}
+    \cvitem{09/2015}{Introduction to SAS}{LSTAT, Belgium}{}
     \cvitem{09/2013}{FELASA C - Laboratory Animal Sciences}{KU Leuven, Belgium}{}
 
 \cvsection{My R programs portfolio}
 \textbf{meaR} (public repository) \newline
-The output files from \href{https://www.multichannelsystems.com/products/vitro-mea-systems}{\color{blue}{Multi-Electrode Arrays}} contain \emph{in vitro} electrophysiological data and are scanned and extracted for only the numeric data. In a master datafile, meaR performs calculations for a variety of electrophysiological parameters and visualizes spike and burst activity for all 60 electrodes over time \newline\newline
+The text files from \href{https://www.multichannelsystems.com/products/vitro-mea-systems}{\color{blue}{Multi-Electrode Arrays}} contain \emph{in vitro} electrophysiological measurements embedded with text.  The numeric \textbf{data are extracted} from the text file and a master datafile is assembled. meaR then performs calculations for a variety of electrophysiological parameters and visualizes spike and burst activity for all 60 electrodes over time \newline
+
 \textbf{phenotyper} (private repository, open for discussion) \newline
-For the processing and analysis of \href{https://www.sylics.com/bioinformatics/cognitionwall/}{\color{blue}{Phenotyper}} data, we can use a cloud service upon payment. Through reverse engineering, however, the phenotyper program performs similarly to the cloud service and calculates additional behavioral parameters \newline\newline
+For the processing and analysis of \href{https://www.sylics.com/bioinformatics/cognitionwall/}{\color{blue}{Phenotyper}} data, we can use a cloud service upon payment. Through \textbf{reverse engineering}, I designed the phenotyper program that performs similarly to the cloud service and calculates additional behavioral parameters \newline
+
 \textbf{easyPCR} (private repository, open for discussion) \newline
-Mouse genotyping is a tedious process that requires several steps prior to the wet lab work:  identification of the sample's model, pre-mix calculations, and planning of the assembly plates for PCR and electrophoresis. These can easily take up to half a day time. With easyPCR, all these steps are automatically performed and presented in an R Markdown report ready for the user to follow \newline\newline
+Mouse genotyping is a tedious process that requires several steps prior to the wet lab work:  identification of the sample's model, pre-mix calculations, and planning of the assembly plates for PCR and electrophoresis. These can easily take up to half a day time. With easyPCR, an \textbf{automated report} is created with R Markdown that contains all these steps ready for the user to follow and optimized for the \href{https://www.qiagen.com/us/service-and-support/learning-hub/technologies-and-research-topics/sample-quality-control/instruments/qiaxcel-advanced/}{\color{blue}{QIAxcel apparatus}} \newline
+
 \textbf{unidamr} (private repository, open for discussion) \newline
-Through a Shiny app, behavioral data from \emph{Drosophila} are analyzed, categorized as either sleep or awake state, and several parameters are calculated and analyzed
+Through an \textbf{interactive Shiny dashboard}, behavioral data from \emph{Drosophila} are analyzed, categorized as either sleep or awake state, and several parameters are calculated and analyzed
 
 \newpage
 \makebacksidebar
 
-
 \cvsection{Teaching Experience}
-    \cvitem{09/2019}{Unofficial Course at my department}{Université de Lausanne, Switzerland}{How to use R for data import, manipulation, visualization and analysis: for PhD students}
+    \cvitem{09/2019}{"DNF Coding Club": Unofficial Course at my department}{Université de Lausanne, Switzerland}{How to use R for data import, manipulation, visualization and analysis: for PhD students}
     \cvitem{09/2015}{Workshop at Summer School}{KU Leuven, Belgium}{Subject: "The use of rodent models in fear conditioning, learning and memory}
     \cvitem{2013}{Bachelor Course at KU Leuven}{B-KUL-P0M20B}{How to use SPSS for basic data manipulation and interpret SPSS output}
 
@@ -247,13 +251,13 @@ Through a Shiny app, behavioral data from \emph{Drosophila} are analyzed, catego
 For the full list, \href{https://www.researchgate.net/profile/Adrian_Lo/research}{\color{blue}{please click here}} \newline
 
 \begin{cvtable}
-	\cvitem{2019}{\emph{Nature Communications}, \textbf{10}, 3454}{}{\textbf{The autism- and schizophrenia-associated protein CYFIP1 regulates bilateral brain connectivity and behaviour} \newline Domínguez-Iturza N, \textbf{Lo AC}, Shah D, Armendáriz M, Vannelli A, Mercaldo V, Trusel M, Li KW, Gastaldo D, Santos AR, Callaerts-Vegh Z, D'Hooge R, Mameli M, Van der Linden A, Smit AB, Achsel T, Bagni C.}
-	\cvitem{2017}{\emph{Nature Communications}, \textbf{8}, 293}{}{\textbf{The non-coding RNA BC1 regulates experience-dependent structural plasticity and learning}\newline Briz V, Restivo L, Pasciuto E, Juczewski K, Mercaldo V, \textbf{Lo AC}, Baatsen P, Gounko NV, Borreca A, Girardi T, Luca R, Nys J, Poorthuis RB, Mansvelder HD, Fisone G, Ammassari-Teule M, Arckens L, Krieger P, Meredith R, Bagni C.}
-	\cvitem{2014}{\emph{Neuropharmacology}, \textbf{85}, 178-89}{}{\textbf{SSP-002392, a new 5-HT4 receptor agonist, dose-dependently reverses scopolamine-induced learning and memory impairments in C57Bl/6 mice}\newline \textbf{Lo AC}, De Maeyer JH, Vermaercke B, Callaerts-Vegh Z, Schuurkes JA, D'Hooge R.
+	\cvitem{2019}{\emph{Nature Communications}}{}{\textbf{The autism- and schizophrenia-associated protein CYFIP1 regulates bilateral brain connectivity and behaviour} \newline Domínguez-Iturza N, \textbf{Lo AC}, Shah D, Armendáriz M, Vannelli A, Mercaldo V, Trusel M, Li KW, Gastaldo D, Santos AR, Callaerts-Vegh Z, D'Hooge R, Mameli M, Van der Linden A, Smit AB, Achsel T, Bagni C.}
+	\cvitem{2017}{\emph{Nature Communications}}{}{\textbf{The non-coding RNA BC1 regulates experience-dependent structural plasticity and learning}\newline Briz V, Restivo L, Pasciuto E, Juczewski K, Mercaldo V, \textbf{Lo AC}, Baatsen P, Gounko NV, Borreca A, Girardi T, Luca R, Nys J, Poorthuis RB, Mansvelder HD, Fisone G, Ammassari-Teule M, Arckens L, Krieger P, Meredith R, Bagni C.}
+	\cvitem{2014}{\emph{Neuropharmacology}}{}{\textbf{SSP-002392, a new 5-HT4 receptor agonist, dose-dependently reverses scopolamine-induced learning and memory impairments in C57Bl/6 mice}\newline \textbf{Lo AC}, De Maeyer JH, Vermaercke B, Callaerts-Vegh Z, Schuurkes JA, D'Hooge R.
 	}
-	\cvitem{2013}{\emph{Neuropharmacology}, \textbf{75}, 458-66}{}{\textbf{Dose-dependent improvements in learning and memory deficits in APPPS1-21 transgenic mice treated with the orally active A\textbeta toxicity inhibitor SEN1500}\newline \textbf{Lo AC}, Tesseur I, Scopes DI, Nerou E, Callaerts-Vegh Z, Vermaercke B, Treherne JM, De Strooper B, D'Hooge R.
+	\cvitem{2013}{\emph{Neuropharmacology}}{}{\textbf{Dose-dependent improvements in learning and memory deficits in APPPS1-21 transgenic mice treated with the orally active A\textbeta toxicity inhibitor SEN1500}\newline \textbf{Lo AC}, Tesseur I, Scopes DI, Nerou E, Callaerts-Vegh Z, Vermaercke B, Treherne JM, De Strooper B, D'Hooge R.
 	}
-	\cvitem{2013}{\emph{Science}, \textbf{340}, 924-e}{}{\textbf{Comment on "ApoE-directed therapeutics rapidly clear \textbeta-amyloid and reverse deficits in AD mouse models"}\newline Tesseur I*, \textbf{Lo AC}*, Roberfroid A, Dietvorst S, Van Broeck B, Borgers M, Gijsen H, Moechars D, Mercken M, Kemp J, D'Hooge R, De Strooper B. * authors contributed equally
+	\cvitem{2013}{\emph{Science}}{}{\textbf{Comment on "ApoE-directed therapeutics rapidly clear \textbeta-amyloid and reverse deficits in AD mouse models"}\newline Tesseur I*, \textbf{Lo AC}*, Roberfroid A, Dietvorst S, Van Broeck B, Borgers M, Gijsen H, Moechars D, Mercken M, Kemp J, D'Hooge R, De Strooper B. * authors contributed equally
 	}
 \end{cvtable}
 
