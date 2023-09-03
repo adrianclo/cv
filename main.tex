@@ -77,7 +77,7 @@
 % your name
 \cvname{Adrian C. \textbf{Lo}}
 % job title/career
-\cvjobtitle{Clinical Data Manager\newline Data Analyst} % \newline Neuroscientist
+\cvjobtitle{Statistical Programmer\newline Data Analyst} % \newline Neuroscientist
 % date of birth
 \cvbirthday{June 30, 1984 (Belgium)}
 % short address/location, use \newline if more than 1 line is required
@@ -127,26 +127,29 @@
 		\pointskill{\flag{GB.png}}{English}{5}
   	    \pointskill{\flag{FR.png}}{French}{4}
   	    \pointskill{\flag{CN.png}}{Chinese (Cantonese)}{4}
-  	    \pointskill{\flag{DE.png}}{German}{2}
+  	    \pointskill{\flag{DE.png}}{German}{3}
   	    
 	\profilesection{Computer Skills}
 	
 		\pointskill{}{R}{5}
-		\pointskill{}{R Markdown}{5}
 		\pointskill{}{Visualization (ggplot2)}{5}
 		\pointskill{}{Excel}{5}
-		\pointskill{}{Excel (macro/VBA)}{4}
-		\pointskill{}{Power BI}{3}
+		\pointskill{}{R Shiny}{4}
+        \pointskill{}{R Markdown}{4}
+        \pointskill{}{SAS}{3}
+        \pointskill{}{Excel (macro/VBA)}{3}
+        \pointskill{}{Power BI}{3}
 		\pointskill{}{Tableau}{3}
 		\pointskill{}{Machine Learning}{3}
 		\pointskill{}{Git/Github}{3}
-		\pointskill{}{SQL}{3}
-		\pointskill{}{Python}{2}
-		%\pointskill{}{SPSS}{3}
-		\pointskill{}{R Shiny}{2}
-  	    \pointskill{}{HTML}{2}
-  	    \pointskill{}{\LaTeX}{2}
-  	    \pointskill{}{SAS}{1}
+        \pointskill{}{SQL}{3}
+		\pointskill{}{Python}{3}
+		\pointskill{}{SPSS}{3}
+  	    \pointskill{}{JavaScript}{2}
+        \pointskill{}{\LaTeX}{2}
+        \pointskill{}{HTML}{1}
+  	    
+  	    
 }
 
 %-------------------------------------------------------------------------------
@@ -199,7 +202,11 @@
 
 \cvsection{Work Experience}
 \begin{cvtable}
-	\cvitem{2021 -- present}{Clinical Data Manager}{MSD, Switzerland}{
+	\cvitem{2022 -- present}{Statistical Programmer (BARDS HTA)}{MSD, Switzerland}{
+	- Produce TLFs for clinical SAS projects\newline
+    %- R Coach for colleagues within the department\newline
+	- Collaborator in innovation initiatives with R}
+    \cvitem{2021 -- 2022}{Clinical Data Manager (GDO)}{MSD, Switzerland}{
 	- Review and curation of clinical trial data\newline
 	- Supporting clinical trial teams with programming solutions}
 	\cvitem{2016 -- 2021}{Neuroscientist}{Université de Lausanne, Switzerland}{
@@ -223,38 +230,40 @@
     
 \cvsection{Certificates and Courses}
     \cvitem{02/2015}{R programming}{John Hopkins Univ., Coursera}{}
-    \cvitem{06/2018}{Statistical Methods for Big Data in Life Sciences and Health with R}{SIB, Switzerland}{}
-    \cvitem{09/2015}{Introduction to SAS}{LSTAT, Belgium}{}
     \cvitem{12/2019}{Advanced R Shiny}{SIB, Switzerland}{}
-    \cvitem{09/2018}{Introduction to Data Analysis with Python}{EPFL Extension School, Switzerland}{}
-    \cvitem{04/2022}{Introduction to Power BI}{Datacamp}{}
-    \cvitem{02/2021}{Analyzing Data in Tableau}{Datacamp}{}
+    \cvitem{09/2015}{Introduction to SAS}{LSTAT, Belgium}{}
     \cvitem{12/2020}{Databases and SQL for Data Science}{IBM, Coursera}{}
     \cvitem{01/2019}{Data Management Plan}{SIB, Switzerland}{}
     \cvitem{10/2018}{Project Management}{EPFL, Switzerland}{}
-    \cvitem{05/2015}{Text Mining with R}{KU Leuven, Belgium}{}
+    \cvitem{06/2018}{Statistical Methods for Big Data in Life Sciences and Health with R}{SIB, Switzerland}{}
+    \cvitem{09/2018}{Introduction to Data Analysis with Python}{EPFL Extension School, Switzerland}{}
+    \cvitem{12/2022}{Applied Data Science Program}{MIT Professional Education, USA}{}
+    %\cvitem{04/2022}{Introduction to Power BI}{Datacamp}{}
+    %\cvitem{02/2021}{Analyzing Data in Tableau}{Datacamp}{}
+    %\cvitem{05/2015}{Text Mining with R}{KU Leuven, Belgium}{}
     %\cvitem{09/2013}{FELASA C - Laboratory Animal Sciences}{KU Leuven, Belgium}{}
 
 \cvsection{My R programs portfolio}
-\textbf{meaR} (public repository: click  \href{https://github.com/adrianclo/meaR}{\color{blue}{here}} to review it) \newline
-The text files from \href{https://www.multichannelsystems.com/products/vitro-mea-systems}{\color{blue}{Micro-Electrode Arrays}} contain \emph{in vitro} electrophysiological measurements interspersed with text.  The numeric \textbf{data are extracted} from the text file and a master datafile is assembled. meaR then performs calculations for a variety of electrophysiological parameters and visualizes spike and burst activity for all 60 electrodes over time \newline
+\textbf{meaR} (public repository: click \href{https://github.com/adrianclo/meaR}{\color{blue}{here}} to review it) \newline
+\textbf{Extracts numeric data} from exported \href{https://www.multichannelsystems.com/products/vitro-mea-systems}{\color{blue}{Micro-Electrode Arrays}} text files that contain \emph{in vitro} electrophysiological measurements. \{meaR\} performs calculations for a variety of quantitative parameters and visualizes spike and burst activity for all 60 electrodes over time \newline
 
-\textbf{phenotyper} (private repository, available for discussion) \newline
-For the processing and analysis of \href{https://www.sylics.com/bioinformatics/cognitionwall/}{\color{blue}{Phenotyper}} data, we can use a cloud service upon payment. Through \textbf{reverse engineering}, I designed the phenotyper program that performs similarly to the cloud service and calculates additional behavioral parameters \newline
+\textbf{phenotyper} (public repository: click \href{https://github.com/adrianclo/phenotyper}{\color{blue}{here}} to review it) \newline
+For the processing and analysis of \href{https://www.sylics.com/bioinformatics/cognitionwall/}{\color{blue}{Phenotyper}} data, we can use a cloud service upon payment. Through \textbf{reverse engineering}, I designed the \{phenotyper\} program that performs similarly to the cloud service and calculates additional behavioral parameters \newline
+
+\textbf{dam3} (public repository: click \href{https://github.com/adrianclo/dam3}{\color{blue}{here}} to review it) \newline
+A pipeline to process \href{https://trikinetics.com}{\color{blue}{Trikinetics}} DAM behavioral data from \emph{Drosophila}. \textbf{Longitudinal data} where behaviors are categorized as either sleep or awake state. Quantitative and qualitative sleep parameters are calculated \newline
+%Through an \textbf{interactive Shiny application}, behavioral data from \emph{Drosophila} are analyzed, categorized as either sleep or awake state, and several parameters are calculated and analyzed
 
 \textbf{easyGeno} (private repository, available for discussion) \newline
-Mouse genotyping is a tedious process that requires several steps prior to the wet lab work:  identification of the sample's model, pre-mix calculations, and planning of the assembly plates for PCR and electrophoresis. These can easily take up to half a day time. With easyGeno, an \textbf{automated report} is created with R Markdown that contains all these steps ready for the user to follow and optimized for the \href{https://www.qiagen.com/us/service-and-support/learning-hub/technologies-and-research-topics/sample-quality-control/instruments/qiaxcel-advanced/}{\color{blue}{QIAxcel apparatus}}. Finally, I developed a follow-up module that extracts the result from the QIAxcel pdf report and \textbf{cross-references with our database file} to automate band identification \newline
-
-\textbf{unidamr} (private repository, available for discussion) \newline
-A pipeline to process \href{https://trikinetics.com}{\color{blue}{Trikinetics}} DAM behavioral data from \emph{Drosophila}. \textbf{Longitudinal data} where behaviors are categorized as either sleep or awake state. Quantitative and qualitative sleep parameters are calculated 
-%Through an \textbf{interactive Shiny application}, behavioral data from \emph{Drosophila} are analyzed, categorized as either sleep or awake state, and several parameters are calculated and analyzed
+A pipeline workflow for mouse genotyping including identification of the sample's model, pre-mix calculations, and planning of the assembly plates for PCR and electrophoresis. Manually, these can easily take up to half a day time. \{easyGeno\} produces an \textbf{automated report} through R Markdown containing all the steps for the user to follow and optimized for the \href{https://www.qiagen.com/us/service-and-support/learning-hub/technologies-and-research-topics/sample-quality-control/instruments/qiaxcel-advanced/}{\color{blue}{QIAxcel apparatus}}. Additional follow-up module was developed that extracts the result from the QIAxcel pdf report and \textbf{cross-references with our database file} to automate band and genotype identification 
 
 \newpage
 \makebacksidebar
 
-\cvsection{Teaching Experience}
+\cvsection{Teaching/Coaching Experience}
+    \cvitem{2022-present}{BAAMR}{MSD, Switzerland}{R Coach for R trainings in tidyverse coding (level 1) and R package development (level 2)}
     \cvitem{2019-2020}{Coding Club}{Université de Lausanne, Switzerland}{Interactive course between PhD students and Postdocs on how to use R for data import, manipulation, visualization and analysis}
-    %\cvitem{09/2015}{Workshop at Summer School}{KU Leuven, Belgium}{Subject: "The use of rodent models in fear conditioning, learning and memory}
+    \cvitem{09/2015}{Workshop at Summer School}{KU Leuven, Belgium}{Subject: "The use of rodent models in fear conditioning, learning and memory}
     \cvitem{2013}{Bachelor Course at KU Leuven}{B-KUL-P0M20B}{How to use SPSS for basic data manipulation, statistics and SPSS output interpretation}
 
 \cvsection{Conferences and Presentations}
@@ -264,20 +273,21 @@ A pipeline to process \href{https://trikinetics.com}{\color{blue}{Trikinetics}} 
     \cvitem{2012}{International Stockholm/Springfield symposium on advances in Alzheimer's disease}{Stockholm, Sweden}{Behavioural effects of selenium in mouse models of Alzheimer’s disease}
     \cvitem{2010}{Forum of European Neurosciences}{Amsterdam, The Netherlands}{Reversible changes in neurocognitive performance and hippocampal synaptic plasticity in tau mutant mouse lines}
     
-\cvsection{Publications (6 most recent)}
+\cvsection{Publications (5 most recent)}
 For the full list, \href{https://www.researchgate.net/profile/Adrian_Lo/research}{\color{blue}{please click here}} \newline
 
 \begin{cvtable}
-    \cvitem{2021}{\emph{BioRxiv}}{}{\textbf{Scopolamine blocks context-dependent reinstatement of fear responses in rats} \href{https://www.biorxiv.org/content/10.1101/2021.02.24.432279v1}{\color{blue}{[doi]}} \newline Vercammen, LM, \textbf{Lo AC}, D'Hooge R, Vervliet B.}
-	\cvitem{}{\emph{EMBO Reports}}{}{\textbf{Absence of RNA binding protein FXR2P prevents prolonged phase of kainate-induced seizures} \href{https://www.embopress.org/doi/full/10.15252/embr.202051404}{\color{blue}{[doi]}} \newline \textbf{Lo AC}, Rajan N, Gastaldo D, Telley T, Hilal ML, Buzzi A, Simonato M, Achsel T, Bagni C.}
-	\cvitem{2019}{\emph{Nature Communications}}{}{\textbf{The autism- and schizophrenia-associated protein CYFIP1 regulates bilateral brain connectivity and behaviour} \href{https://www.nature.com/articles/s41467-019-11203-y}{\color{blue}{[doi]}} \newline Domínguez-Iturza N, \textbf{Lo AC}, Shah D, Armendáriz M, Vannelli A, Mercaldo V, Trusel M, Li KW, Gastaldo D, Santos AR, Callaerts-Vegh Z, D'Hooge R, Mameli M, Van der Linden A, Smit AB, Achsel T, Bagni C. }
-	\cvitem{2017}{\emph{Nature Communications}}{}{\textbf{The non-coding RNA BC1 regulates experience-dependent structural plasticity and learning} \href{https://www.nature.com/articles/s41467-017-00311-2}{\color{blue}{[doi]}} \newline Briz V, Restivo L, Pasciuto E, Juczewski K, Mercaldo V, \textbf{Lo AC}, Baatsen P, Gounko NV, Borreca A, Girardi T, Luca R, Nys J, Poorthuis RB, Mansvelder HD, Fisone G, Ammassari-Teule M, Arckens L, Krieger P, Meredith R, Bagni C.}
-	\cvitem{2014}{\emph{Neuropharmacology}}{}{\textbf{SSP-002392, a new 5-HT4 receptor agonist, dose-dependently reverses scopolamine-induced learning and memory impairments in C57Bl/6 mice}  \href{https://www.sciencedirect.com/science/article/abs/pii/S0028390814001804?via\%3Dihub}{\color{blue}{[doi]}} \newline \textbf{Lo AC}, De Maeyer JH, Vermaercke B, Callaerts-Vegh Z, Schuurkes JA, D'Hooge R.
-	}
+    \cvitem{2023}{\emph{Neuron}}{}{\textbf{Altered striatal actin dynamics drives behavioral inflexibility in a mouse model of fragile X syndrome} \href{https://pubmed.ncbi.nlm.nih.gov/36996810/}{\color{blue}{[link]}} \newline Mercaldo V, Vidimova B, Gastaldo D, Fernández E, \textbf{Lo AC}, Cencelli G, Pedini G, De Rubeis S, Longo F, Klann E, Smit AB, Grant SGN, Achsel T, Bagni C.}
+    \cvitem{}{\emph{Nature Communications}}{}{\textbf{SREBP modulates the NADP+/NADPH cycle to control night sleep in Drosophila} \href{https://www.nature.com/articles/s41467-022-35577-8}{\color{blue}{[link]}} \newline Mariano V, Kanellopoulos AK, Aiello G, \textbf{Lo AC}, Legius E, Achsel T, Bagni C.}
+    
+    \cvitem{2021}{\emph{BioRxiv}}{}{\textbf{Scopolamine blocks context-dependent reinstatement of fear responses in rats} \href{https://www.biorxiv.org/content/10.1101/2021.02.24.432279v1}{\color{blue}{[link]}} \newline Vercammen, LM, \textbf{Lo AC}, D'Hooge R, Vervliet B.}
+	\cvitem{}{\emph{EMBO Reports}}{}{\textbf{Absence of RNA binding protein FXR2P prevents prolonged phase of kainate-induced seizures} \href{https://www.embopress.org/doi/full/10.15252/embr.202051404}{\color{blue}{[link]}} \newline \textbf{Lo AC}, Rajan N, Gastaldo D, Telley T, Hilal ML, Buzzi A, Simonato M, Achsel T, Bagni C.}
+	\cvitem{2019}{\emph{Nature Communications}}{}{\textbf{The autism- and schizophrenia-associated protein CYFIP1 regulates bilateral brain connectivity and behaviour} \href{https://www.nature.com/articles/s41467-019-11203-y}{\color{blue}{[link]}} \newline Domínguez-Iturza N, \textbf{Lo AC}, Shah D, Armendáriz M, Vannelli A, Mercaldo V, Trusel M, Li KW, Gastaldo D, Santos AR, Callaerts-Vegh Z, D'Hooge R, Mameli M, Van der Linden A, Smit AB, Achsel T, Bagni C. }
+	%\cvitem{2017}{\emph{Nature Communications}}{}{\textbf{The non-coding RNA BC1 regulates experience-dependent structural plasticity and learning} \href{https://www.nature.com/articles/s41467-017-00311-2}{\color{blue}{[doi]}} \newline Briz V, Restivo L, Pasciuto E, Juczewski K, Mercaldo V, \textbf{Lo AC}, Baatsen P, Gounko NV, Borreca A, Girardi T, Luca R, Nys J, Poorthuis RB, Mansvelder HD, Fisone G, Ammassari-Teule M, Arckens L, Krieger P, Meredith R, Bagni C.}
+	%\cvitem{2014}{\emph{Neuropharmacology}}{}{\textbf{SSP-002392, a new 5-HT4 receptor agonist, dose-dependently reverses scopolamine-induced learning and memory impairments in C57Bl/6 mice}  \href{https://www.sciencedirect.com/science/article/abs/pii/S0028390814001804?via\%3Dihub}{\color{blue}{[doi]}} \newline \textbf{Lo AC}, De Maeyer JH, Vermaercke B, Callaerts-Vegh Z, Schuurkes JA, D'Hooge R.}
 	%\cvitem{2013}{\emph{Neuropharmacology}}{}{\textbf{Dose-dependent improvements in learning and memory deficits in APPPS1-21 transgenic mice treated with the orally active A\textbeta toxicity inhibitor SEN1500}  \href{https://www.sciencedirect.com/science/article/abs/pii/S0028390813003973?via\%3Dihub}{\color{blue}{[doi]}} \newline \textbf{Lo AC}, Tesseur I, Scopes DI, Nerou E, Callaerts-Vegh Z, Vermaercke B, Treherne JM, De Strooper B, D'Hooge R.
 	%}
-	\cvitem{2013}{\emph{Science}}{}{\textbf{Comment on "ApoE-directed therapeutics rapidly clear \textbeta-amyloid and reverse deficits in AD mouse models"} \href{https://science.sciencemag.org/content/340/6135/924.5.long}{\color{blue}{[doi]}} \newline Tesseur I*, \textbf{Lo AC}*, Roberfroid A, Dietvorst S, Van Broeck B, Borgers M, Gijsen H, Moechars D, Mercken M, Kemp J, D'Hooge R, De Strooper B. * authors contributed equally
-	}
+	%\cvitem{2013}{\emph{Science}}{}{\textbf{Comment on "ApoE-directed therapeutics rapidly clear \textbeta-amyloid and reverse deficits in AD mouse models"} \href{https://science.sciencemag.org/content/340/6135/924.5.long}{\color{blue}{[doi]}} \newline Tesseur I*, \textbf{Lo AC}*, Roberfroid A, Dietvorst S, Van Broeck B, Borgers M, Gijsen H, Moechars D, Mercken M, Kemp J, D'Hooge R, De Strooper B. * authors contributed equally}
 \end{cvtable}
 
 \cvsignature
